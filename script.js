@@ -264,8 +264,6 @@ for (let i = 0; i < questions.length; i++) {
             answers[i].style.opacity = '0'
 
 
-            answers[i].style.opacity = '0'
-            answers[i].style.height = '0'
             answers[i].innerText = questionsBodies[i].answer
             answers[i].style.display = 'block'
 
