@@ -23,6 +23,10 @@ body {
     font-family: 'DrukWideCyr-Bold', sans-serif;
 }
 
+.container {
+    overflow: hidden;
+}
+
 
 
 .header {
@@ -54,8 +58,8 @@ body {
 }
 
 .greenStar {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .headerItem {
@@ -381,6 +385,21 @@ body {
     z-index: -2;
 }
 
+.descriptionParagraphContainer {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+}
+
+.descriptionParagraphSvg {
+    width: 3.125rem;
+    margin-right: .88rem;
+}
+
+.prizeContainer {
+    height: 85rem;
+}
+
 .prizeSquareSvg {
     position: absolute;
     width: 80rem;
@@ -429,7 +448,7 @@ body {
     border-radius: 2.5rem;
     border: 1px solid #B8FE4E;
     /*background: t;*/
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -500,13 +519,24 @@ body {
 
 .prizeDescription {
     color: #FAFBF7;
-    margin-left: 17.5rem;
     /* текст обычный */
     font-family: Montserrat;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2.375rem; /* 158.333% */
+    margin-left: 1.5rem;
+}
+
+.prizeDescriptionContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 13.06rem;
+}
+
+.prizeDescriptionStarSvg {
+    width: 3rem;
+    height: 3rem;
 }
 
 .timetableContainer {
@@ -698,7 +728,7 @@ body {
 }
 
 .expertsContainer {
-    height: 325rem;
+    height: auto;
 }
 
 .expertSvgLinesMobile1 {
@@ -876,30 +906,50 @@ body {
 .questions {
     display: flex;
     flex-direction: column;
-}
-
-.question {
     margin-left: 13.13rem;
-    display: flex;
-    width: 93.75rem;
-    padding: 2.25rem 4rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1.5rem;
-    border-radius: 2.5rem;
+
+
+}
+.question {
+    margin-right: 1.25rem;
+    justify-content: start;
     border: 1px solid #0C0E1F;
+    border-radius: 2rem;
     background: rgba(250, 251, 247, 0.01);
     backdrop-filter: blur(2px);
     margin-bottom: 1.5rem;
     transition: .5s;
-    height: 7.5rem;
+    padding: 1.5rem;
+    height: 5rem;
+    cursor: pointer;
+    display: flex;
+    width: 93.75rem;
+    /*padding: 2.25rem 4rem;*/
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.questionBody {
+
+.answer {
     color: #0C0E1F;
-    width: 82.75rem;
-    margin: 0;
+
+    /* Моб мелк текст */
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem; /* 142.857% */
+    margin: 0 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.questionHeader {
+    color: #0C0E1F;
+
     /* подзаголовок */
     font-family: Montserrat;
     font-size: 2rem;
@@ -908,12 +958,33 @@ body {
     line-height: 3rem; /* 150% */
 }
 
-.question:hover {
-    height: 15rem;
+.questionHeaderContainer {
+    display: flex;
+    margin: 1rem 1.25rem 0 1.25rem;
+
+    width: 95%;
+    /*padding: 0;*/
+    height: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    color: #0C0E1F;
+    display: none;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem; /* 142.857% */
+    transition: .2s;
 }
 
 .plusSvg {
+    width: 1.5rem;
     height: 1.5rem;
+    margin-right: 1.25rem;
 }
 
 .footer {
@@ -1064,6 +1135,11 @@ body {
     font-weight: 400;
     line-height: 2.375rem; /* 158.333% */
     text-decoration-line: underline;
+}
+
+.hrefTg {
+    color: #B8FE4E;
+
 }
 
 .hrefTg:visited {
@@ -1380,7 +1456,8 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 1.25rem; /* 142.857% */
-        width: 24.375rem;
+        width: 22.12269rem;
+
     }
     #descriptionBlock2 {
         flex-direction: column-reverse;
@@ -1388,6 +1465,18 @@ body {
 
     #descriptionBlockText2 {
         margin-left: 1.25rem;
+    }
+
+    .descriptionParagraphContainer {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+    }
+
+    .descriptionParagraphSvg {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: .88rem;
     }
 
     .prizeContainer {
@@ -1513,11 +1602,21 @@ body {
     }
 
     .prizeDescription {
-        margin-left: 1.25rem;
+        margin-left: .62rem;
+        width: 22rem;
         font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 1.25rem; /* 125% */
+    }
+
+    .prizeDescriptionContainer{
+        margin-left: 1.25rem;
+    }
+
+    .prizeDescriptionStarSvg {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .timetableContainer {
@@ -1856,10 +1955,10 @@ body {
         margin-right: 1.25rem;
         display: flex;
         width: calc(100% - 2.5rem);
-        padding: 1.5rem;
-        flex-direction: row;
+        padding: 0;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: start;
         gap: 1.5rem;
         border: 1px solid #0C0E1F;
         border-radius: 2rem;
@@ -1867,24 +1966,59 @@ body {
         backdrop-filter: blur(2px);
         margin-bottom: 1.5rem;
         transition: .5s;
-        height: 5.5rem;
+        height: 5rem;
+        cursor: pointer;
     }
 
-    .question:hover {
-        height: 15rem;
+
+    .answer {
+        color: #0C0E1F;
+
+        /* Моб мелк текст */
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem; /* 142.857% */
+        margin: 0 1.25rem;
+        display: flex;
+        align-items: center;
     }
 
-    .questionBody {
+
+
+    .questionHeader {
         font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 1.25rem; /* 125% */
         width: 18.875rem;
+        padding-top: 1.25rem;
+    }
+
+    .questionHeaderContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1.5rem;
+    }
+
+    .answer {
+        color: #0C0E1F;
+        display: none;
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem; /* 142.857% */
+        transition: .2s;
     }
 
     .plusSvg {
         width: 1.5rem;
         height: 1.5rem;
+        margin-right: 1.25rem;
+        margin-top: 1rem;
     }
 
     .footer {
